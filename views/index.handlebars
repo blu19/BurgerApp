@@ -6,10 +6,10 @@
     {{#each burgers}}
     {{#unless devoured}}
     <li>
-        {{name}}
+        {{burger_name}}
     
-        <button class="change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
-            {{#if devour}}Devour!{{/if}}
+        <button class="change-devour" data-id="{{id}}" data-newdevour="true">
+            Devour!
         </button>
     </li>
     {{/unless}}
@@ -20,9 +20,9 @@
 
 <ul>
     {{#each burgers}}
-    {{#if devour}}
+    {{#if devoured}}
     <li>
-        {{name}}
+        {{burger_name}}
     </li>
     {{/if}}
     {{/each}}
@@ -33,7 +33,7 @@
 
     <div class="form-group">
         <label for="Bur">Burger Name:</label>
-        <input type="text" id="ca" name="name">
+        <input type="text" id="burger_name" name="name">
     </div>
 
     <div class="form-group">
