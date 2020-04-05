@@ -1,33 +1,48 @@
-<h1>Burgers!</h1>
 
-<h2>Burgers that are not Devoured!</h2>
+<div class="container text-center">
+<img src="assets/img/burger-cartoon-vector-895857.jpg" alt="burger" class="bugerImg">
 
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    <li>
-        {{burger_name}}
-    
-        <button class="change-devour" data-id="{{id}}" data-newdevour="true">
-            Devour!
-        </button>
-    </li>
-    {{/unless}}
-    {{/each}}
-</ul>
+<h1>Burger Time!</h1>
+</div>
 
-<h2>Burgers that are devoured!</h2>
+<div class="container">
+    <div class="row">
+        <div class="col">
 
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    <li>
-        {{burger_name}}
-    </li>
-    {{/if}}
-    {{/each}}
-</ul>
+            <h2>Burgers not Devoured!</h2>
 
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                <li>
+                    {{burger_name}}
+                
+                    <button class="change-devour button" data-id="{{id}}" data-newdevour="true">
+                        Devour!
+                    </button>
+                </li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col">
+
+            <h2>Burgers Devoured!</h2>
+
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                <li>
+                    {{burger_name}}
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
 <h2>Add a Burger</h2>
 <form class="create-form">
 
@@ -36,11 +51,18 @@
         <input type="text" id="burger_name" name="name">
     </div>
 
-    <div class="form-group">
+    {{!-- <div class="form-group">
         <label for="Devour">Devoured?</label><br>
         <input type="radio" name="Devoured" value="1" checked> Devoured!<br>
         <input type="radio" name="Devoured" value="0"> Not devoured
-    </div>
+    </div> --}}
 
-    <button type="submit">Add Burger</button>
+    <button class="button" type="submit">Add Burger</button>
 </form>
+
+    </div>
+</div>
+
+<div class="container footer">
+    <p>BrianU &copy; 2020</p>
+</div>
